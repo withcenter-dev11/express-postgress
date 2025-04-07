@@ -1,6 +1,9 @@
 import express, { Request, Response } from "express";
 import { getUserById, getUsers } from "./db";
+import dotenv from "dotenv";
 
+dotenv.config();
+const PORT = process.env.PORT;
 const app = express();
 
 app.use(
@@ -25,6 +28,6 @@ app.get("/users", getUsers);
 
 app.get("/users/:id", getUserById);
 
-app.listen(3000, () => {
-  console.log("Server is running on http://localhost:3000");
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
