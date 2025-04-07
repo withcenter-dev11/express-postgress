@@ -1,0 +1,27 @@
+{
+  "name": "express-postgress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch index.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@eslint/js": "^9.24.0",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.0",
+    "@types/pg-pool": "^2.0.6",
+    "eslint": "^9.24.0",
+    "globals": "^16.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.0"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.14.1"
+  }
+}

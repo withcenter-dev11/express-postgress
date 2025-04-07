@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>THis is the index.html page</h1>
+
+    <div>
+      <ul id="users">
+        <h1>users</h1>
+      </ul>
+    </div>
+  </body>
+
+  <script type="module">
+    const response = await fetch("/users");
+    const result = await response.json();
+
+    console.log(result);
+
+    const ul = document.getElementById("users");
+
+    result.forEach((element) => {
+      const li = document.createElement("li");
+      li.innerHTML = `name: ${element.name} | email: ${element.email}`;
+
+      ul.append(li);
+    });
+  </script>
+</html>
